@@ -1,0 +1,22 @@
+{% extends 'security/base.html' %}
+
+{% block content %}
+
+<h3>REGISTER</h3>
+
+<form method="POST" action="{% url 'register' %}">
+	{% csrf_token %}
+
+	{% if form.errors %}
+	    <p>Your form has Errors...</p>
+	{% endif %}
+
+	{{ form.as_p }}
+
+<input type="submit" value="Register" class="btn btn-secondary">
+</form>
+
+
+
+
+{% endblock %}

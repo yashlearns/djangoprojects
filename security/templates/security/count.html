@@ -1,0 +1,11 @@
+<body style="background-color: lightblue"></body>
+<h1>WORD COUNTER</h1>
+
+
+
+<form action="{% url 'count1' %}">
+  <textarea cols="40" rows="10" name="fulltext"></textarea>
+  <br />
+  <input type="submit" value="COUNT!" class="btn btn-secondary" />
+</form>
+<a href="{% url 'about' %}">About</a>
